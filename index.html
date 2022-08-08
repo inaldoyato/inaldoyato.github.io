@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Documentação Rural Deals</title>
+    <link href="../projeto/bootstrap4/css/bootstrap.min.css" rel="stylesheet">
+    <link href="estilo.css" rel="stylesheet">
+    
+  </head>
+  <body>
+      <h6 class="text-uppercase font-weight-bold">Group Login</h6>
+      <h1>Login ( /login )</h1>
+        <div id="conteudo">
+          <div>
+            <table>
+              <tr>
+                <th><input class=botão type="button" value="post"><span></span>
+                  <input class="botão2" type="button"value="/login">
+                </th>
+              </tr>
+              <th class="tdsize">
+              Example URL
+              </th>
+              <td>
+                <p>POST <a>http://api.soundsoflife.com/v1/login</a></p>
+              </td>
+              <td>
+                <span class="font-weight-bold">Response</span> <span class="circular">200</span><br>
+                <span class="font-weight-bold">Response</span> <span class="circular">404</span>
+              </td>
+              </table>
+          </div>
+          <br>
+          <div>
+            Autenticação e autorização ( /auth )
+            
+            Endpoint: /forgot
+            Método: POST
+            Body: JSON
+            Atributos: “email” : string
+            Retorno: HTTP 200 OK
+            —
+            Endpoint: /refresh_token (requer header authorization)
+            Método: POST
+            Retorno: HTTP 200 OK - Header Authorization
+          </div>
+          <br>
+          <div>
+            Localização ( /localizacao )
+            
+            Endpoint: /ufAtivas
+            Método: GET
+            Retorno: OK - JSON
+            Corpo do retorno: Array das UFs atendidas no sistema
+            Atributos do retorno: “id” : integer, “nome” : string
+            —
+            Endpoint: /cidades
+            Método: GET
+            Parâmetros: codEstado - Integer
+            Retorno: HTTP 200 OK - JSON
+            Corpo do Retorno: Array das cidades da UF requisitada no parâmetro
+            Atributos do retorno: “id” : integer, “nome” : string, “estado” : integer
+          </div>
+        </div>
+    
+        
+    
+  </body>
+</html>
+<script src="../projeto/bootstrap4/js/bootstrap.bundle.min.js"></script>
